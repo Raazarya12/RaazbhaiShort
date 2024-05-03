@@ -72,9 +72,10 @@ async def start(client, message):
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
                 InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='subscription')
-            ],[
-                InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
             ])
+            buttons.append([
+                InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+            ]) 
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
@@ -136,10 +137,11 @@ async def start(client, message):
                 ]]
         if IS_VERIFY or IS_SHORTLINK is True:
             buttons.append([
-                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='subscription')
-            ],[
-                InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+                InlineKeyboardButton('ʀᴇғғᴇʀ 💖', callback_data='subscription') 
             ])
+            buttons.append([
+                InlineKeyboardButton('✨ ʙᴜʏ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ : ʀᴇᴍᴏᴠᴇ ᴀᴅꜱ ✨', callback_data="premium_info")
+            ]) 
         reply_markup = InlineKeyboardMarkup(buttons)
         current_time = datetime.now(pytz.timezone(TIMEZONE))
         curr_time = current_time.hour        
@@ -314,13 +316,6 @@ async def start(client, message):
                 await delete_all_referal_users(user_id)
                 await client.send_message(chat_id = user_id, text = "<b>ᴄᴏɴɢʀᴀᴛᴜʟᴀᴛɪᴏɴs 🎁🎉, ʏᴏᴜʀ ᴛᴏᴛᴀʟ ʀᴇғᴇʀʀᴀʟ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nʏᴏᴜ ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғᴏʀ 1 ᴍᴏɴᴛʜ</b>")
                 return 
-
-    elif data.split("-", 1)[0] == "del":
-        user_id = int(data.split("-", 1)[1])
-        
-        await delete_all_referal_users(user_id)
-        await message.reply("<b>Invite Successfully Deleted </b>")
-        return 
                 
     elif data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
@@ -417,7 +412,7 @@ async def start(client, message):
                         InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url=HOW_TO_VERIFY)
                         ]]
                 await message.reply_text(
-                    text=(script.VERIFY_TEXT),
+                    text='<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ  !\nᴋɪɴᴅʟʏ ᴠᴇʀɪꜰʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ !</b>', 
                     protect_content=True if pre == 'filep' else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -516,7 +511,7 @@ async def start(client, message):
                     InlineKeyboardButton("💸 𝐑𝐞𝐦𝐨𝐯𝐞 𝐕𝐞𝐫𝐢𝐟𝐲 💸", callback_data='seeplans')
                 ]]
                 await message.reply_text(
-                    text=(script.VERIFY_TEXT),
+                    text='<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ  !\nᴋɪɴᴅʟʏ ᴠᴇʀɪꜰʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ !</b>',
                     protect_content=True if PROTECT_CONTENT else False,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -591,7 +586,7 @@ async def start(client, message):
             InlineKeyboardButton("💸 𝐑𝐞𝐦𝐨𝐯𝐞 𝐕𝐞𝐫𝐢𝐟𝐲 💸", callback_data='seeplans')
         ]]
         await message.reply_text(
-            text=(script.VERIFY_TEXT),
+            text="<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ  !\nᴋɪɴᴅʟʏ ᴠᴇʀɪꜰʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ !</b>",
             protect_content=True if PROTECT_CONTENT else False,
             reply_markup=InlineKeyboardMarkup(btn)
         )
