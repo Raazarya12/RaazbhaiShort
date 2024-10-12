@@ -72,7 +72,7 @@ IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 # verify link shortner
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1843")
-VERIFY2_URL = environ.get('VERIFY2_URL', "urlshortx.com")
+VERIFY2_URL = environ.get('VERIFY2_URL', "instantearn.in")
 VERIFY2_API = environ.get('VERIFY2_API', "fe42ad11c5d8487b19d045dfe7402a4db13bdd80")
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001998895377').split()]
