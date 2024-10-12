@@ -55,13 +55,13 @@ USERS_COUNT = int(environ.get('USERS_COUNT', "2")) # Set Referel User Count
 INVITED_USER_TRAIL = int(environ.get('INVITED_USER_TRAIL', "86400")) #set in seconds, free trail invites users in 1 day, 
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'urlshortx.com'))
-STREAM_API = (environ.get('STREAM_API', '8afa8fbc218cc0791c62495f2c510c92524503ce'))
+STREAM_SITE = (environ.get('STREAM_SITE', 'instantearn.in'))
+STREAM_API = (environ.get('STREAM_API', 'fe42ad11c5d8487b19d045dfe7402a4db13bdd80'))
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/Hoe/69'))
 STREAM_LINK_MODE = is_enabled((environ.get('STREAM_LINK_MODE', "False")), False)
 
 #premium Users Satuts
-premium = environ.get('PREMIUM_LOGS', '-1001998895377')
+premium = environ.get('PREMIUM_LOGS', '-1001981739990')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
 #files link shortnet
@@ -71,7 +71,7 @@ IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 # verify link shortner
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
-HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1843")
+HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/link_Streaam_Movies/15")
 VERIFY2_URL = environ.get('VERIFY2_URL', "instantearn.in")
 VERIFY2_API = environ.get('VERIFY2_API', "fe42ad11c5d8487b19d045dfe7402a4db13bdd80")
 
