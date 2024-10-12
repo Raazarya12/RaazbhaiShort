@@ -65,15 +65,15 @@ premium = environ.get('PREMIUM_LOGS', '-1001998895377')
 PREMIUM_LOGS = int(premium) if premium and id_pattern.search(premium) else None
 
 #files link shortnet
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'urlshortx.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '8afa8fbc218cc0791c62495f2c510c92524503ce')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'instantearn.in')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'fe42ad11c5d8487b19d045dfe7402a4db13bdd80')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 # verify link shortner
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1843")
 VERIFY2_URL = environ.get('VERIFY2_URL', "urlshortx.com")
-VERIFY2_API = environ.get('VERIFY2_API', "8afa8fbc218cc0791c62495f2c510c92524503ce")
+VERIFY2_API = environ.get('VERIFY2_API', "fe42ad11c5d8487b19d045dfe7402a4db13bdd80")
 
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1001998895377').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "7")
