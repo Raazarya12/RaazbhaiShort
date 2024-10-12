@@ -2142,7 +2142,7 @@ async def auto_filter(client, msg, spoll=False):
     ])
 
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"sendfiles#{key}"),
+        InlineKeyboardButton("", callback_data=f""),
     ])
 
     if offset != "":
