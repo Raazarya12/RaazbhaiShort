@@ -304,7 +304,7 @@ async def next_page(bot, query):
         InlineKeyboardButton("Sᴇᴀꜱᴏɴꜱ", callback_data=f"jk_dev#{req}")
     ])
     btn.insert(0, [
-        InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"sendfiles#{key}"),  
+        InlineKeyboardButton("", callback_data=f""),  
     ])
     try:
         await query.message.edit_text(text=cap + files_link, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
@@ -463,7 +463,7 @@ async def quality_check(bot, query):
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("", callback_data=f"")
         ])
 
         if offset != "":
@@ -566,7 +566,7 @@ async def seasons_check(bot, query):
         ])
 
         btn.insert(0, [
-            InlineKeyboardButton("! Sᴇɴᴅ Aʟʟ Tᴏ PM !", callback_data=f"sendfiles#{key}")
+            InlineKeyboardButton("", callback_data=f"")
         ])
 
         if offset != "":
