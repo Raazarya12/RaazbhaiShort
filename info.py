@@ -70,7 +70,7 @@ SHORTLINK_API = environ.get('SHORTLINK_API', 'fe42ad11c5d8487b19d045dfe7402a4db1
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 
 # verify link shortner
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/2553447855/3")
 VERIFY2_URL = environ.get('VERIFY2_URL', "inkcents.com")
 VERIFY2_API = environ.get('VERIFY2_API', "e57f2caf7518cb63e45443b3e998f8d7561b6edf")
